@@ -23,8 +23,8 @@ console.log('1) Boolean check if BMI Marks is higher than Mark?');
 console.log('BMI Mark is ' + BMIMark);
 console.log('BMI John is ' + BMIJohn);
 markHigherBMI = BMIMark > BMIJohn;
-console.log(markHigherBMI);
 console.log('Mark has a higher BMI than John is ' + markHigherBMI + '.');
+console.log(markHigherBMI);
 
 console.log('----------------------------------------------------------------');
 console.log('\n');
@@ -42,8 +42,8 @@ console.log('2) Boolean check if BMI Marks is higher than Mark?');
 console.log('BMI Mark is ' + BMIMark);
 console.log('BMI John is ' + BMIJohn);
 markHigherBMI = BMIMark > BMIJohn;
-console.log(markHigherBMI);
 console.log('Mark has a higher BMI than John is ' + markHigherBMI + '.');
+console.log(markHigherBMI);
 
 console.log('----------------------------------------------------------------');
 console.log('\n');
@@ -60,22 +60,30 @@ function compareBMIs(markWeight, markHeight, johnWeight, johnHeight) {
 
 	// Output result
 	if (markHigherBMI) {
-		console.log('Mark has a higher BMI than John.');
+		console.log(
+			`Mark's BMI (${markBMI.toFixed(
+				2
+			)}) is higher than John's (${johnBMI.toFixed(2)})`
+		);
 	} else {
-		console.log('John has a higher BMI than Mark.');
+		console.log(
+			`John's BMI (${johnBMI.toFixed(
+				2
+			)}) is higher than Mark's (${markBMI.toFixed(2)})`
+		);
 	}
 }
 
 // test with test data
 console.log(
-	'Test data 1) Mark(Weight=78, Height=1.69) ,John(Weight=92, Height=1.95)'
+	'Test data 1) Mark(Weight=78, Height=1.69), John(Weight=92, Height=1.95)'
 );
 compareBMIs(78, 1.69, 92, 1.95);
 
 console.log('\n');
 
 console.log(
-	'Test data 2) Mark(Weight=95, Height=1.88) ,John(Weight=85, Height=1.76)'
+	'Test data 2) Mark(Weight=95, Height=1.88), John(Weight=85, Height=1.76)'
 );
 compareBMIs(95, 1.88, 85, 1.76);
 
