@@ -13,13 +13,13 @@ GOOD LUCK 😀
 // TEST DATA 1
 let weightMark = 78;
 let heightMark = 1.69;
-let BMIMark = weightMark / heightMark ** 2;
+let BMIMark = (weightMark / heightMark ** 2).toFixed(2);
 
 let weightJohn = 92;
 let heightJohn = 1.95;
-let BMIJohn = weightJohn / heightJohn ** 2;
+let BMIJohn = (weightJohn / heightJohn ** 2).toFixed(2);
 
-console.log('1) Check if BMI Marks is higher than Mark?');
+console.log('1) Boolean check if BMI Marks is higher than Mark?');
 console.log('BMI Mark is ' + BMIMark);
 console.log('BMI John is ' + BMIJohn);
 markHigherBMI = BMIMark > BMIJohn;
@@ -32,13 +32,13 @@ console.log('\n');
 // TEST DATA 2
 weightMark = 95;
 heightMark = 1.88;
-BMIMark = weightMark / heightMark ** 2;
+BMIMark = (weightMark / heightMark ** 2).toFixed(2);
 
 weightJohn = 85;
 heightJohn = 1.76;
-BMIJohn = weightJohn / heightJohn ** 2;
+BMIJohn = (weightJohn / heightJohn ** 2).toFixed(2);
 
-console.log('2) Check if BMI Marks is higher than Mark?');
+console.log('2) Boolean check if BMI Marks is higher than Mark?');
 console.log('BMI Mark is ' + BMIMark);
 console.log('BMI John is ' + BMIJohn);
 markHigherBMI = BMIMark > BMIJohn;
@@ -48,6 +48,7 @@ console.log('Mark has a higher BMI than John is ' + markHigherBMI + '.');
 console.log('----------------------------------------------------------------');
 console.log('\n');
 
+console.log('3) Check with function if BMI Marks is higher than Mark?');
 // Function for compare BMIs
 function compareBMIs(markWeight, markHeight, johnWeight, johnHeight) {
 	// Calculate BMIs
@@ -66,11 +67,16 @@ function compareBMIs(markWeight, markHeight, johnWeight, johnHeight) {
 }
 
 // test with test data
+console.log(
+	'Test data 1) Mark(Weight=78, Height=1.69) ,John(Weight=92, Height=1.95)'
+);
 compareBMIs(78, 1.69, 92, 1.95);
 
-console.log('----------------------------------------------------------------');
 console.log('\n');
 
+console.log(
+	'Test data 2) Mark(Weight=95, Height=1.88) ,John(Weight=85, Height=1.76)'
+);
 compareBMIs(95, 1.88, 85, 1.76);
 
 console.log('----------------------------------------------------------------');
